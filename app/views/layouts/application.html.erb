@@ -1,14 +1,104 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>EliteTrainer</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title><%= content_for?(:title) ? yield(:title) : "Fear Free Fitness" %></title>
 
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <header>
+    <div class="row">
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <div class="logo">
+            <%= image_tag("Logo.jpg", size: "200x200", alt: "Icon")%>
+          </div>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="right">
+            <li><a href="#">HOME</a></li>
+            <li class="active"><a href="#">ABOUT ME</a></li>
+            <li><a href="#">TESTIMONIALS</a></li>
+            <li class="has-dropdown">
+              <a href="#">TRAINING SERVICES</a>
+              <ul class="dropdown">
+                <li><a href="#">ONLINE COACHING</a></li>
+                <li class="active"><a href="#">BOOK A SESSION</a></li>
+                <li><a href="#"> TRAINING PROGRAMS</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+  </header>
+
+  <body>
+
+    <%= yield %>
+
+  </body>
+
+  <footer>
+    <div class="row">
+      <div class="large-11 large-offset-1 columns">
+        <div class="small-2 large-3 columns">
+          <h6>NAVIGATION</h6>
+          <ul class="nav_text">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Book</a></li>
+            <li><a href="#">Online Coaching</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="small-4 large-3 columns">
+          <h6>CONTACT INFO</h6>
+          <ul>
+            <li>
+              <i class="large material-icons">business</i>
+              <span>Fear Free Fitness</span><br>
+            </li>
+            <li>
+              <i class="large material-icons">call</i>
+              <span>+1 508-208-9282</span><br>
+            </li>
+            <li>
+              <i class="large material-icons">email</i>
+              <span><a href="fearfreefitness@gmail.com">fearfreefitness@gmail.com</a></span>
+            </li>
+          </ul>
+          <i class="mdi mdi-facebook-box">facebook</i>
+        </div>
+
+        <div class="small-6 large-3 columns">
+          <h6>HOURS OF OPERATION</h6>
+          <ul class="right">
+            <li>Monday 6:00 AM – 9:00 PM</li>
+            <li>Tuesday 6:00 AM – 8:00 PM</li>
+            <li>Wednesday 6:00 AM – 8:00 PM</li>
+            <li>Thursday 6:00 AM – 8:00 PM</li>
+            <li>Friday 6:00 AM – 7:00 PM</li>
+            <li>Saturday 8:00 AM- Noon</li>
+          </ul>
+        </div>
+
+        <div class="small-6 large-3 columns">
+          <h6>PROUDLY BUILT BY</h6>
+          <body>This Guy!</body>
+        </div>
+      </div>
+    </div>
+  </footer>
 </html>

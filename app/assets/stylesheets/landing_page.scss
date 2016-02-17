@@ -1,0 +1,47 @@
+@media only screen and (max-width: 30em) {
+  .title-area {
+
+  }
+  .logo {
+
+  }
+
+  .logo img {
+    display: none;
+    height:auto;
+    margin-top:0 0;
+    width:5rem;
+  }
+}
+
+.logo img {
+  display: block;
+  height:156px !important;
+  line-height:156px;
+  margin-left:0.8rem;
+  overflow:hidden;
+  position: relative;
+  top:-1.4rem !important;
+  vertical-align: baseline;
+}
+
+.top-bar {
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: $black;
+  color: $white;
+  font-size: 60%;
+  padding: 2rem 0 4rem 0;
+
+  ul {
+    font-size: 95%;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  h6 {
+    color: $white;
+  }
+}
