@@ -17,16 +17,24 @@
 .logo img {
   display: block;
   height:156px !important;
+  // height:207px !important;
   line-height:156px;
   margin-left:0.8rem;
   overflow:hidden;
   position: relative;
-  top:-1.4rem !important;
+  top:-2.4rem !important;
   vertical-align: baseline;
 }
 
 .top-bar {
-  margin-top: 1rem;
+  margin-top: 2.4rem;
+}
+
+header {
+  .row {
+    margin: 0;
+    max-width: none;
+  }
 }
 
 footer {
@@ -34,6 +42,10 @@ footer {
   color: $white;
   font-size: 60%;
   padding: 2rem 0 4rem 0;
+
+  row {
+    
+  }
 
   ul {
     font-size: 95%;
